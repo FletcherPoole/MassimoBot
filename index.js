@@ -7,10 +7,14 @@ client.on('ready', () => {
 
 client.on('message', message => {
 	
+	if (message.content === 'help') {
+		message.channel.send('are you lost bbg');
+	}
+	
 	if (message.content === 'massimo') {
-			let imageNumber = Math.floor(Math.random()* 98) + 1
-			message.channel.send ( {files: ["./images/" + imageNumber + ".jpg"]} )
-		}
+		let imageNumber = Math.floor(Math.random()* 98) + 1
+		message.channel.send ( {files: ["./images/" + imageNumber + ".jpg"]} )
+	}
 
 });
 
