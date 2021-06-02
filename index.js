@@ -15,6 +15,9 @@ client.on('message', message => {
 		let imageNumber = Math.floor(Math.random()* 98) + 1
 		message.channel.send ( {files: ["./images/" + imageNumber + ".jpg"]} )
 	}
+	if (message.content === 'berry') {
+		message.channel.send('what a furry...');
+	}
 
 });
 
